@@ -15,14 +15,14 @@ jobs:
           wget -O archive.zip "https://www.dropbox.com/scl/fi/qnbk6f10t2jnc01v9wq0c/2800a7c9-aa4e-11f1-b54b-f020ff026637.zip?rlkey=zew2xtvgnck64ied4s0bvq8wi&dl=1"
           unzip archive.zip -d .
 
-          xcodebuild archive -project Dice Roll Prototype.xcodeproj -scheme 'Dice Roll Prototype' -archivePath Dice Roll Prototype.xcarchive -configuration Release CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+          xcodebuild archive -project "Dice Roll Prototype.xcodeproj" -scheme "Dice Roll Prototype" -archivePath "Dice Roll Prototype.xcarchive" -configuration Release CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 
           mkdir Payload
-          mv Dice Roll Prototype.xcarchive/Products/Applications/Dice Roll Prototype.app Payload/Dice Roll Prototype.app
+          mv "Dice Roll Prototype.xcarchive/Products/Applications/Dice Roll Prototype.app" "Payload/Dice Roll Prototype.app"
 
           zip -r "Dice Roll Prototype.ipa" "Payload"
 
-          mv Dice Roll Prototype.ipa ${{ runner.temp }}/Dice Roll Prototype.ipa
+          mv "Dice Roll Prototype.ipa" "${{ runner.temp }}/Dice Roll Prototype.ipa"
 
 
       - name: Upload application
