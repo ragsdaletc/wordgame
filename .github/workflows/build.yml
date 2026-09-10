@@ -12,7 +12,7 @@ jobs:
 
       - name: build archive and ipaify
         run: |
-          wget -O archive.zip "https://www.dropbox.com/scl/fi/1p6b4f3wgaplkwq8an2w7/e805e320-ac11-11f1-aae6-f020ff026637.zip?rlkey=vxpn1i44rp7r7hxayoa8l8wdo&dl=1"
+          wget -O archive.zip "https://www.dropbox.com/scl/fi/kdy7e8yxiqaxhu61nlics/04b12637-acd7-11f1-a0e5-f020ff026637.zip?rlkey=46i73ed2o8inoh513dnbmh2u6&dl=1"
           unzip archive.zip -d .
 
           xcodebuild archive -project "Dice Roll Prototype.xcodeproj" -scheme "Dice Roll Prototype" -archivePath "Dice Roll Prototype.xcarchive" -configuration Release CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
